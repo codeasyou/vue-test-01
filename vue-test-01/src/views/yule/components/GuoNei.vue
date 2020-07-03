@@ -1,6 +1,6 @@
 <template>
     <div id="guonei">
-        <h1>国内娱乐</h1>
+        <h3>国内Yule</h3>
     </div>
 </template>
 

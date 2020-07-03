@@ -1,6 +1,6 @@
 <template>
     <div id="guoji">
-        <h1>国际娱乐</h1>
+        <h3>国际Yule</h3>
     </div>
 </template>
 
