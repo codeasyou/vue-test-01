@@ -5,6 +5,7 @@
             <router-link to="/news">新闻</router-link>
             <router-link to="/yule">娱乐</router-link>
         </div>
+        <!--一级路由出口-->
         <router-view />
     </div>
 

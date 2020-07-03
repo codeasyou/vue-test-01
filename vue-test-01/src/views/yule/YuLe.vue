@@ -6,6 +6,7 @@
             <router-link to="/yule/YGuoNei">国内YULE</router-link>
             <router-link to="/yule/YZuiXin">最新YULE</router-link>
         </div>
+        <!--Yule组件路由出口-->
         <router-view />
     </div>
 </template>

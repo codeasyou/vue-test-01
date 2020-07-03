@@ -6,6 +6,7 @@
             <router-link to="/news/nGuoNei">国内NEWS</router-link>
             <router-link to="/news/nZuiXin">最新NEWS</router-link>
         </div>
+        <!--News组件路由出口-->
         <router-view />
     </div>
 </template>

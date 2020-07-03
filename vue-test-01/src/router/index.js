@@ -1,8 +1,9 @@
+// 路由配置文件 index.js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
-//引入一级路由 主面板
+//引入一级路由作为 主面板
 import MainPanel from './../views/MainPanel'
 
 //引入二级路由
@@ -31,11 +32,19 @@ export default new VueRouter({
             path:"/",
             name:"mainPanel",
             component:MainPanel,
+            redirect:"/home",
             children:[
                 {
                     path: "/home",
                     name:"home",
                     component: Home,
+                    // redirect:"/home/hGuoJi", //字符串重定向
+                    // redirect:{name:"hGuoJi"}, //命名路由重定向
+                    redirect:to=>{ //方法，动态返回重定向目标
+                        // 方法接收 目标路由 作为参数
+                        // return 重定向的 字符串路径/路径对象
+                        return "/home/hGuoJi"
+                    },
                     children: [
                         {
                             path: "hGuoJi",
@@ -58,6 +67,7 @@ export default new VueRouter({
                     path: "/news",
                     name:"news",
                     component: News,
+                    redirect:"/news/nGuoJi",
                     children: [
                         {
                             path: "nGuoJi",
@@ -80,6 +90,7 @@ export default new VueRouter({
                     path: "/yule",
                     name:"yule",
                     component: YuLe,
+                    redirect:"/yule/yGuoJi",
                     children: [
                         {
                             path: "yGuoJi",
